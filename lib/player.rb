@@ -1,6 +1,6 @@
 class Player
 
-  HIT_POINTS = 100
+  HIT_POINTS = 0
 
   attr_reader :name, :hit_points
 
@@ -9,11 +9,7 @@ class Player
     @hit_points = hit_points
   end
 
-  def hugs(name)
-    name.hugged
-  end
-
   def hugged
-    @hit_points -= 10
+    @hit_points += 10
   end
 end

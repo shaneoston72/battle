@@ -10,7 +10,7 @@ feature 'Attack opponent' do
     sign_in_and_play
     click_button 'Hug'
     click_link 'OK'
-    expect(page).not_to have_content('Anne: 100/100 HP')
-    expect(page).to have_content('Anne: 90 /100 HP')
+    expect(page).not_to have_content('Anne: 0/100 HP')
+    expect(page).to have_content('Anne: 10 /100 HP')
   end
 end
