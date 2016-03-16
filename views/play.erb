@@ -1,7 +1,8 @@
-<%= @player_one %> vs. <%= @player_two %>
+<%= @player_one.name %> vs. <%= @player_two.name %>
 
-<%= @player_two %> 60/60 HP
+<%= @player_two.name %>: <%= @player_two.hit_points %> /100 HP
 
 <form action="/attack">
-  <input type="submit" value="Hug <%= @player_two %>">
+  <input type="submit" value="Hug">
+  <!-- and then calls the hugs method on the player one -->
 </form>

@@ -1,8 +1,19 @@
 class Player
 
-  attr_reader :name
+  HIT_POINTS = 100
 
-  def initialize name
+  attr_reader :name, :hit_points
+
+  def initialize(name, hit_points: HIT_POINTS)
     @name = name
+    @hit_points = hit_points
+  end
+
+  def hugs(name)
+    name.hugged
+  end
+
+  def hugged
+    @hit_points -= 10
   end
 end
