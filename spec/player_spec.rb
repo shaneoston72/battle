@@ -25,4 +25,11 @@ describe Player do
       player.hugged
     end
   end
+
+  describe '#winner' do
+    it 'will be true when player\'s hug points are at or above 100' do
+      10.times { player.hugged }
+      expect(player.winner?).to be true
+    end
+  end
 end
