@@ -17,7 +17,7 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-    redirect to ('/winner') if $game.other_player.winner?)
+    redirect to ('/winner') if $game.other_player.winner?
     @game = $game
     @game.switch
     erb(:play)
@@ -30,6 +30,7 @@ class Battle < Sinatra::Base
   end
 
   get '/winner' do
+    @game = $game
     erb(:winner)
   end
   # start the server if ruby file executed directly
