@@ -18,6 +18,13 @@ describe Game do
     end
   end
 
+  describe '#bear_hugs' do
+    it 'bear hugs the players' do
+      expect(player).to receive(:bear_hugged)
+      game.bear_hugs(player)
+    end
+  end
+
   describe '#current_player' do
     it 'starts as player 1 after switch' do
       game.switch

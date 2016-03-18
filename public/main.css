@@ -1,0 +1,6 @@
+.container {
+  display: flex;
+}
+header .img {
+  width: 30%;
+}

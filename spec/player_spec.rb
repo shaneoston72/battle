@@ -13,22 +13,25 @@ describe Player do
       expect(player.hit_points).to eq described_class::HIT_POINTS
     end
   end
-  # describe '#hugs' do
-  #   it 'hugs the players' do
-  #     expect(player).to receive(:hugs)
-  #     player.hugs(player2)
-  #   end
-  # end
+
   describe '#hugged' do
-    it 'reduces player\'s hit points' do
+    it 'calls the hugged method in player' do
       expect(player).to receive(:hugged)
       player.hugged
     end
   end
 
+  describe '#bear_hugged' do
+    it 'calls the bear_hugged method in player' do
+      expect(player).to receive(:bear_hugged)
+      player.bear_hugged
+    end
+  end
+
   describe '#winner' do
     it 'will be true when player\'s hug points are at or above 100' do
-      10.times { player.hugged }
+      allow(Kernel).to receive(:rand).and_return(100)
+      player.hugged
       expect(player.winner?).to be true
     end
   end

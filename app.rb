@@ -25,9 +25,14 @@ class Battle < Sinatra::Base
     erb(:play)
   end
 
-  get '/attack' do
+  get '/hug' do
     @game.hugs(@game.other_player)
-    erb(:attack)
+    erb(:hug)
+  end
+
+  get '/bear_hug' do
+    @game.bear_hugs(@game.other_player)
+    erb(:bear_hug)
   end
 
   get '/winner' do

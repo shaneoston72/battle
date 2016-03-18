@@ -11,7 +11,11 @@ class Player
   end
 
   def hugged
-    @hit_points += 10
+    @hit_points += Kernel.rand(0..10)
+  end
+
+  def bear_hugged
+    @hit_points += Kernel.rand(0..10) * 2
   end
 
   def winner?

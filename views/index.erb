@@ -1,5 +1,15 @@
-<form action="/names" method="post">
-    <input type="text" name="player_one" placeholder="Name Player 1">
-    <input type="text" name="player_two" placeholder="Name Player 2">
-    <input type="submit" value="Submit">
-</form>
+<link rel="stylesheet" type="text/css" href="<%= url("/reset.css")%>">
+<link rel="stylesheet" type="text/css" href="<%= url("/main.css")%>">
+<div class="container">
+  <header>
+    <img src="images/coverCat.jpg" />
+    <h1>Kitty Cat Hugs</h1>
+    <img src="images/coverCat.jpg" />
+  </header>
+
+  <form action="/names" method="post">
+      <input type="text" name="player_one" placeholder="Name Player 1">
+      <input type="text" name="player_two" placeholder="Name Player 2">
+      <input type="submit" value="Submit">
+  </form>
+</div>

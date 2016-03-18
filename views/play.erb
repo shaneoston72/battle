@@ -1,9 +1,10 @@
 
 <h1><%= @game.player1.name %> vs. <%= @game.player2.name%></h1>
-<p><%= @game.player1.name %>: <%= @game.player1.hit_points %> / 100 HP
-<%= @game.player2.name %>: <%= @game.player2.hit_points %> / 100 HP</p>
+<p><%= @game.player1.name %> <%= @game.player1.hit_points %>/100 HP
+<%= @game.player2.name %> <%= @game.player2.hit_points %>/100 HP</p>
 <h2><%= @game.current_player.name %>'s turn</h2>
-<form action="/attack">
+<!-- <form action="/attack">
   <input type="submit" value="Hug">
-  <!-- and then calls the hugs method on the player one -->
-</form>
+</form> -->
+<a href="/hug" class="button">Hug</a>
+<a href="/bear_hug" class="button">Bear Hug</a>
