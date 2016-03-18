@@ -6,7 +6,7 @@ feature 'winner' do
     19.times do 
       click_button("Hug")
       click_link("OK")
-    end  
+    end
     expect(page).to have_content("Anne is the winner! Yay for Anne!")
   end
 end

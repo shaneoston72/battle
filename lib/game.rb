@@ -2,7 +2,7 @@ require './lib/player'
 require 'pry'
 
 class Game
-  @game = 0
+  
 
   attr_reader :player1, :player2, :current_player, :other_player
 
